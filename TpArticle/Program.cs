@@ -13,6 +13,12 @@ Art2.CalculateVAT();
 Art2.DisplayArticle();
 #endregion
 #region Article3 with Reference and Designation
-Article Article3 = new Article(411, "DFG");
-Article3.DisplayArticle(); 
+Article Art3 = new Article(411, "DFG");
+Art3.PriceET = 78;
+Art3.CalculateVAT();
+Art3.DisplayArticle();
+#endregion
+#region Article4 with copy constructor
+Article Article4 = new Article(Art3);
+Article4.DisplayArticle(); 
 #endregion
