@@ -26,6 +26,18 @@ namespace TpArticle
             _articleNB++;
         }
         /// <summary>
+        /// Constructor with Reference and Designation
+        /// </summary>
+        /// <param name="reference"></param>
+        /// <param name="designation"></param>
+        public Article(int reference, string designation)
+            : this()
+        {
+            _reference = reference;
+            _designation = designation;
+            
+        }
+        /// <summary>
         /// Constructor with all attribute
         /// </summary>
         /// <param name="reference"></param>
@@ -33,35 +45,20 @@ namespace TpArticle
         /// <param name="priceET"></param>
         /// <param name="priceVAT"></param>
         public Article(int reference, string designation, double priceET, double priceVAT)
+           : this(reference,designation)
         {
-            _reference = reference;
-            _designation = designation;
             _priceET = priceET;
             _priceVAT = priceVAT;
-            _articleNB++;
-        }
-        /// <summary>
-        /// Constructor with Reference and Designation
-        /// </summary>
-        /// <param name="reference"></param>
-        /// <param name="designation"></param>
-        public Article(int reference, string designation)
-        {
-            _reference = reference;
-            _designation = designation;
-            _articleNB++;
+            
         }
         /// <summary>
         /// Copi constructor
         /// </summary>
         /// <param name="article"></param>
         public Article(Article article)
+            :this(article.Reference, article.Designation, article.PriceET, article.PriceVAT) 
         {
-            _reference = article._reference;
-            _designation = article._designation;
-            _priceET = article._priceET;
-            _priceVAT = article._priceVAT;
-            _articleNB++;
+            
         }
         #endregion
         #region Get & Set Reference
