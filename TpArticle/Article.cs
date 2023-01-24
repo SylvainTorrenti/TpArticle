@@ -62,21 +62,39 @@ namespace TpArticle
         }
         #endregion
         #region Get & Set Reference
+        /// <summary>
+        /// Reference
+        /// </summary>
         public int Reference { get => _reference; set => _reference = value; }
         #endregion
         #region Get & Set Designation
+        /// <summary>
+        /// Designation
+        /// </summary>
         public string Designation { get => _designation; set => _designation = value; }
         #endregion
         #region Get & Set PriceET
+        /// <summary>
+        /// PriceET
+        /// </summary>
         public double PriceET { get => _priceET; set => _priceET = value; }
         #endregion
         #region Get & Set PriceVAT
+        /// <summary>
+        /// PriceVAT
+        /// </summary>
         public double PriceVAT { get => _priceVAT; set => _priceVAT = value; }
         #endregion
         #region Get & Set Number
+        /// <summary>
+        /// Number
+        /// </summary>
         public int Number { get => _number; set => _number = value; } 
         #endregion
         #region Method
+        /// <summary>
+        /// Display article
+        /// </summary>
         public void DisplayArticle()
         {
             Console.WriteLine($"Article {Number} :");
@@ -86,6 +104,10 @@ namespace TpArticle
             Console.WriteLine($"Prix TTC : {PriceVAT}");
             Console.WriteLine();
         }
+        /// <summary>
+        /// Calculate VAT
+        /// </summary>
+        /// <returns></returns>
         public double CalculateVAT()
         {
             return _priceVAT = PriceET + (PriceET * _VAT / 100);
